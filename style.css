@@ -1,0 +1,302 @@
+/* Corpo da página */
+body {
+    font-family: "Chakra Petch", sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Mudado para espaço entre pesquisa e imagens/links */
+    /*min-height: 100vh; /* Garante que a página ocupe a altura inteira */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #80c1ff;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-style: 2.5rem;
+    color: #152527;
+    margin: 0;
+}
+
+/* Seção da barra de pesquisa */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+
+/* Estilização da barra de pesquisa */
+header input {
+    width: 30rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+    color: #45474B;
+    margin-top: 111px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+header button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: #30475E;
+    color: #F5F7F8;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #3b5678;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 60rem;
+    height: auto;
+    max-height: 46vh;
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização dos itens de resultado */
+.item-resultado {
+    background-color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-resultado h2 {
+    font-size: 1.5rem;
+    color: #30475E;
+}
+
+.item-resultado a {
+    text-decoration: none;
+    color: #30475E;
+}
+
+.item-resultado a:hover {
+    text-decoration: underline;
+}
+
+/* Seção de links e imagens na parte inferior */
+.links-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.links-imagens img {
+    width: 150px;
+    height: auto;
+    margin: 0 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.links-imagens a {
+    text-align: center;
+    font-size: 1rem;
+    color: #30475E;
+    margin-top: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #81cad0;
+    color: #000000;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    position: relative; /* Mudado para que o rodapé fique no final da página sem sobrepor o conteúdo */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header input {
+        width: 25rem;
+        padding: 0.8rem;
+    }
+
+    .resultados-pesquisa {
+        width: 90%;
+        max-height: 40vh;
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem;
+    }
+
+    .links-imagens img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    header input {
+        width: 17rem;
+    }
+
+    header button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .resultados-pesquisa {
+        width: 90%;
+        max-height: 50vh;
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem;
+    }
+
+    .links-imagens img {
+        width: 100px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+/* Estilo criativo para o nav */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #81cad0;
+    padding: 1rem 2rem;
+    /* border-radius: 2rem; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Estilo para os links */
+nav a {
+    color: #F5F5F5; /* Cor dos links (branco) */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease; /* Suaviza a transição */
+    border-radius: 1rem;
+}
+
+/* Efeito hover nos links */
+nav a:hover {
+    background-color: #F05454; /* Cor de fundo no hover */
+    color: #FFFFFF;
+    transform: scale(1.1); /* Aumenta levemente o tamanho */
+    box-shadow: 0 4px 8px rgba(240, 84, 84, 0.2); /* Adiciona uma leve sombra */
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+.fundo{
+    background-image: url("img/back.jpg");
+}
+.video-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ddecf3;
+  }
+  .video-section2 {
+    
+        margin-top: 20px;
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between;
+        padding: -1px;
+        background-color: #ffffff;
+    
+  }
+
+  .video-image {
+    position: relative;
+    width: 50%;
+  }
+  
+  .video-image img {
+    width: 95%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+  }
+  
+  .video-content {
+    width: 58%;
+}
+  
+  .video-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+.description {
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #333;
+    font-family: ui-monospace;
+    font-size: 16px;
+}
+  .read-more-button {
+    background-color: #f0b429;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .read-more-button:hover {
+    background-color: #e6a314;
+  }
+  
